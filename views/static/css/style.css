@@ -1,0 +1,2 @@
+﻿body { font-family:'Segoe UI', sans-serif; padding:1rem; }
+@media (max-width:768px){ .dashboard-card{ flex-direction:column; margin-bottom:1rem;} audio{ width:100%; } }

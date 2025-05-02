@@ -1,0 +1,54 @@
+﻿2025-05-01T20:23:47	Git & .gitignore for Backend
+2025-05-01T20:23:47	Created README.md
+2025-05-01T20:23:47	Created requirements.txt with core packages
+2025-05-01T20:23:47	Created .env.example
+2025-05-01T20:23:47	Created docs/
+2025-05-01T20:23:48	Created src/controllers
+2025-05-01T20:23:48	Created src/models
+2025-05-01T20:23:48	Created src/utils
+2025-05-01T20:23:48	Created core
+2025-05-01T20:23:48	Created tests
+2025-05-01T20:23:48	Created data
+2025-05-01T20:23:48	Created views/templates
+2025-05-01T20:23:48	Created views/static/css
+2025-05-01T20:23:48	Created views/static/js
+2025-05-01T20:23:48	Created views/static/images
+2025-05-01T20:23:48	Created views/static/audio
+2025-05-01T20:23:48	Created src/agents/cloelia_ai
+2025-05-01T20:23:48	Created src/utils/forms
+2025-05-01T20:23:48	Created src/utils/mailer
+2025-05-01T20:23:48	Created src/models/sql_models
+2025-05-01T20:23:48	Created stub: core/universal_algorithm.py
+2025-05-01T20:23:48	Created stub: src/utils/openai_client.py
+2025-05-01T20:23:48	Created stub: core/symbolic_graph.py
+2025-05-01T20:23:48	Created stub: src/controllers/emotion_log_controller.py
+2025-05-01T20:23:48	Created stub: src/controllers/role_controller.py
+2025-05-01T20:23:48	Created stub: src/utils/elevenlabs_client.py
+2025-05-01T20:23:48	Created stub: src/controllers/auth_controller.py
+2025-05-01T20:23:48	Created stub: src/utils/virtue_engine.py
+2025-05-01T20:23:48	Created stub: src/agents/cloelia_ai/cloelia_api.py
+2025-05-01T20:23:48	Created stub: src/models/user_model.py
+2025-05-01T20:23:48	Created stub: src/controllers/soul_controller.py
+2025-05-01T20:23:49	Created stub: src/utils/soul_init.py
+2025-05-01T20:23:49	Added feature package: flask-login
+2025-05-01T20:23:49	Added feature package: flask-wtf
+2025-05-01T20:23:49	Added feature package: passlib[bcrypt]
+2025-05-01T20:23:49	Added feature package: flask-mail
+2025-05-01T20:23:49	Added feature package: flask-sqlalchemy
+2025-05-01T20:23:49	Added feature package: pyodbc
+2025-05-01T20:23:49	Created HTML template: views/templates/register.html
+2025-05-01T20:23:49	Created HTML template: views/templates/dashboard.html
+2025-05-01T20:23:49	Created HTML template: views/templates/emotion_log.html
+2025-05-01T20:23:49	Created HTML template: views/templates/role_intro.html
+2025-05-01T20:23:49	Created HTML template: views/templates/base.html
+2025-05-01T20:23:49	Created CSS stub
+2025-05-01T20:23:49	Created JS stub
+2025-05-01T20:23:49	Created media stub: views/static/images/placeholder.txt
+2025-05-01T20:23:49	Created media stub: views/static/audio/Role_Seeker.mp3
+2025-05-01T20:23:49	Created media stub: views/static/audio/Role_Strategist.mp3
+2025-05-01T20:23:49	Created media stub: views/static/audio/Class_Reveal_Intro.mp3
+2025-05-01T20:23:49	Created database.py
+2025-05-01T20:23:49	Created data file: data/virtue_db.json
+2025-05-01T20:23:49	Created data file: data/role_paths.json
+2025-05-01T20:23:49	Created data file: data/emotion_log.json
+2025-05-01T20:23:49	Created quickstart.ps1
