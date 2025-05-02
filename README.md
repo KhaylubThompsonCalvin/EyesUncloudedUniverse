@@ -1,4 +1,4 @@
-﻿# Atlas_Signature â€” Atlas Signature Scaffold
+﻿# Atlas_Signature Atlas Signature Scaffold
 
 Project Type: Full  
 SkipAgent:    False  
