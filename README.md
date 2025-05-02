@@ -1,5 +1,16 @@
 # Atlas_Signature Atlas Signature Scaffold
 
+
+ ERD Diagram (Visual):
+![EyesUncloudedUniverse ERD](docs/EyesUncloudedUniverse_ERD.png)
+
+ ERD Schema:
+See [`docs/EyesUncloudedUniverse_Updated_Full_ERD.dbml`](docs/EyesUncloudedUniverse_Updated_Full_ERD.dbml)
+
+ ERD Documentation:
+See [`docs/ERD_Architecture.md`](docs/ERD_Architecture.md)
+
+
 Philosophy: "See with Eyes Unclouded"
 
 This project is not just code — it is the start of a symbolic legacy:
