@@ -1,0 +1,147 @@
+
+Project EyesUncloudedUniverse {
+  database_type: "PostgreSQL"
+}
+
+Table users {
+  user_id int [pk, increment]
+  username varchar
+  email varchar
+  password_hash varchar
+  role_type varchar // Seeker, Mentor, etc.
+  class varchar // Queen of the Eagle Order, etc.
+  perception_score int
+  virtue_affinity varchar
+  legacy_key varchar // for descendants
+  created_at datetime
+}
+
+Table celestial_bodies {
+  body_id int [pk, increment]
+  name varchar // Planet, Moon, Sun
+  type varchar // planet, moon, sun
+  symbol varchar
+  description text
+  position_coords json // 3D scene mapping
+  unlocked_by_points int
+  parent_body_id int [ref: > celestial_bodies.body_id]
+}
+
+Table clickables {
+  clickable_id int [pk, increment]
+  body_id int [ref: > celestial_bodies.body_id]
+  name varchar
+  description text
+  target_link varchar
+  is_portfolio_link boolean
+  unlock_cost int
+  requires_auth boolean
+  interaction_icon varchar // for favicon or visual marker
+}
+
+Table navigation_links {
+  nav_id int [pk, increment]
+  source_body_id int [ref: > celestial_bodies.body_id]
+  destination varchar // URL or system ID
+  interaction_type varchar // click, hover, gesture
+  unlock_requirements text
+}
+
+Table user_unlocks {
+  unlock_id int [pk, increment]
+  user_id int [ref: > users.user_id]
+  clickable_id int [ref: > clickables.clickable_id]
+  unlocked_at datetime
+  used_points int
+  unlocked boolean
+}
+
+Table points_log {
+  log_id int [pk, increment]
+  user_id int [ref: > users.user_id]
+  source_event varchar
+  points_earned int
+  emotion_triggered varchar
+  timestamp datetime
+}
+
+Table auth_gate {
+  gate_id int [pk, increment]
+  clickable_id int [ref: > clickables.clickable_id]
+  requires_email boolean
+  requires_password boolean
+  requires_legacy_key boolean
+  unlock_token varchar
+}
+
+Table virtues {
+  virtue_id int [pk, increment]
+  name varchar
+  description text
+  category varchar
+}
+
+Table expressions {
+  expression_id int [pk, increment]
+  name varchar
+  description text
+  associated_emotion varchar
+}
+
+Table virtue_expression_link {
+  id int [pk, increment]
+  virtue_id int [ref: > virtues.virtue_id]
+  expression_id int [ref: > expressions.expression_id]
+  context_note text
+}
+
+Table sources {
+  source_id int [pk, increment]
+  title varchar
+  author varchar
+  type varchar
+  year int
+}
+
+Table source_virtue_link {
+  id int [pk, increment]
+  source_id int [ref: > sources.source_id]
+  virtue_id int [ref: > virtues.virtue_id]
+  insight_note text
+}
+
+Table user_notes {
+  note_id int [pk, increment]
+  user_id int [ref: > users.user_id]
+  virtue_id int [ref: > virtues.virtue_id]
+  note_text text
+  timestamp datetime
+}
+
+Table mentor_lessons {
+  lesson_id int [pk, increment]
+  title varchar
+  content text
+  role_types varchar
+  tags varchar
+  audio_filename varchar
+  author varchar
+  created_at datetime
+}
+
+Table perception_entries {
+  entry_id int [pk, increment]
+  user_id int [ref: > users.user_id]
+  chapter_id int
+  emotion_detected varchar
+  virtue_response varchar
+  timestamp datetime
+}
+
+Table chapters {
+  chapter_id int [pk, increment]
+  title varchar
+  summary text
+  audio_filename varchar
+  scene_tags varchar
+}
