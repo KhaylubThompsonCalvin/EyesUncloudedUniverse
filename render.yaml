@@ -1,9 +1,14 @@
+# render.yaml
+# Deployment configuration for CloeliaAI_AgentSystem using Atlas Signature Scaffold
+# This file tells Render how to build and run your FastAPI-based AI agent.
+
 services:
   - type: web
-    name: atlas-signature-gateway
+    name: cloelia-ai-agent
     env: python
+    plan: free
     buildCommand: "pip install -r requirements.txt"
     startCommand: "python main.py"
-    plan: free
     envVars:
       - fromDotEnv: true
+
