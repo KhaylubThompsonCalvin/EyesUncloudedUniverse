@@ -1,4 +1,4 @@
-EyesUnclouded Universe Gateway
+# EyesUnclouded Universe Gateway
 # File: main.py
 # Project: Atlas Signature Gateway Interface
 # Author: Khaylub Thompson-Calvin
@@ -23,7 +23,7 @@ EyesUnclouded Universe Gateway
 # - Flask documentation: https://flask.palletsprojects.com/
 # - MongoDB Atlas connection methods
 # - Project memory structure: Atlas Signature Scaffold Plan
-# -------------------------------------------------------------------------------
+
 
 from flask import Flask
 from dotenv import load_dotenv
